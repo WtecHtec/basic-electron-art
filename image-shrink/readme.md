@@ -5,6 +5,21 @@ npm i electron -D
 # 加载
 ## loadFile 加载文件
 ## loadURL 加载url
+# html 使用node 内置、 electron函数
+```
+new  BrowserWindow({
+		title: 'ImageShrink',
+		width: isDev ? 700 :  500,
+		height: 600,
+		icon: './aseet/icon/icon-04.png',
+		// 配置 html 使用 requrie
+		webPreferences: {
+			nodeIntegration: true,
+			contextIsolation: false,
+		}
+	})
+
+```
 # 图片压缩工具
 npm i imagemin@7.0.1 imagemin-mozjpeg@8.0.0 imagemin-pngquant@8.0.0 slash@3.0.0 -D
 ## slash 解决mac、win系统路径不一致问题
